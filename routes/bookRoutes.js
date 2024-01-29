@@ -9,6 +9,7 @@ import compressionMiddleware from "../utils/compression.js";
 
 const router = express.Router();
 
+
 router.get("/readAll", compressionMiddleware, getAllBooks);
 router.get("/read/:id", compressionMiddleware, getBookByID);
 router.post("/insert", validateBook, insertNew);
